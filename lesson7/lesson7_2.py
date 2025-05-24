@@ -1,0 +1,31 @@
+def caculate_bmi(height: int, weight: int) -> float:
+    return (weight /((height / 100) ** 2))
+
+def classify_bmi(bmi: float) -> str:
+    if bmi < 18.5:
+        return "體重過重"
+    elif bmi < 24:
+        return "正常範圍"
+    elif bmi < 27:
+        return "過重"
+    elif bmi < 30:
+        return "輕度肥胖"
+    elif bmi < 35:
+        return "中度肥胖"
+    else:
+        return "重度肥胖"
+
+def main():
+    height = 170
+    #height:int = int(input("請輸入身高(cm):"))
+    weight = 62
+    #weight:int = int(input("請輸入體重(kg):"))
+
+    bmi = caculate_bmi(height , weight)
+
+    print(f"BMI:{bmi:.2f}")
+    print(classify_bmi(bmi))
+
+
+if __name__ == '__main__':
+    main()
